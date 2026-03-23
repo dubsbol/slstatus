@@ -68,6 +68,6 @@ static const struct arg args[] = {
 	/* function format          argument */
 //	{ run_command, "^c#ff0000^%s^c#ffffff^",           "~/.config/slstatus/sharing.sh" },
 //	{ run_command, "%s",           "~/.config/slstatus/music.sh" },
-	{ run_command, "[%s%]",           "amixer sget Master | grep -Pom 1 '[0-9]{,3}(?=%)'" },
+	{ run_command, "%s",           "wpctl status | grep -Pom 1 '(?<=\*)(.*)(\K\[.*\])'" },
 	{ datetime, "[%s]",           "%F %T" },
 };
